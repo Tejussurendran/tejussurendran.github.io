@@ -22,8 +22,9 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#research">Research</a>
+        <a class="nav-projects" href="#personal-projects">Projects</a>
         <a href="#publications">Publications</a>
-        <a href="#background">Background</a>
+        <a class="nav-background" href="#background">Background</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -91,29 +92,69 @@
         <div class="research-grid">
           <article class="research-card">
             <span class="card-number">01</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="8" y="8" width="32" height="32" rx="4" /><path d="M15 31c4-10 8-14 18-14M15 24c8 0 11 4 18 8" /><circle cx="16" cy="17" r="2" /></svg></div>
-            <h3>Computer Vision &amp; Medical Image Segmentation</h3>
-            <p>Developing robust semantic-segmentation methods for accurate, repeatable analysis of knee cartilage in medical images.</p>
-            <ul class="tag-list" aria-label="Methods"><li>Deep learning</li><li>Semantic segmentation</li></ul>
+            <figure class="research-media research-media-crop">
+              <img src="assets/good-slice.webp" alt="Sagittal knee MRI with cartilage and meniscus segmentation overlays" loading="lazy" />
+            </figure>
+            <div class="research-card-copy">
+              <h3>Computer Vision &amp; Medical Image Segmentation</h3>
+              <p>Developing robust semantic-segmentation methods for accurate, repeatable analysis of knee cartilage in medical images.</p>
+              <ul class="tag-list" aria-label="Methods"><li>Deep learning</li><li>Semantic segmentation</li></ul>
+            </div>
           </article>
 
           <article class="research-card">
             <span class="card-number">02</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 28c5-12 11-17 20-17 6 0 10 3 10 8 0 8-8 18-20 18-6 0-10-3-10-9Z" /><path d="M15 29c5-7 11-11 18-10M20 35c0-6 3-12 9-17" /></svg></div>
-            <h3>In Vivo Medical Image Analysis</h3>
-            <p>Quantifying cartilage strain and recovery across daily activities to understand how living joints respond to physiological loading.</p>
-            <ul class="tag-list" aria-label="Methods"><li>2D–3D imaging</li><li>Quantitative analysis</li></ul>
+            <figure class="research-media research-media-contain">
+              <img src="assets/unrolling.png" alt="Diagram of femoral and tibial cartilage contact and unrolling for in vivo analysis" loading="lazy" />
+            </figure>
+            <div class="research-card-copy">
+              <h3>In Vivo Medical Image Analysis</h3>
+              <p>Quantifying cartilage strain and recovery across daily activities to understand how living joints respond to physiological loading.</p>
+              <ul class="tag-list" aria-label="Methods"><li>2D–3D imaging</li><li>Quantitative analysis</li></ul>
+            </div>
           </article>
 
           <article class="research-card">
             <span class="card-number">03</span>
-            <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M12 37h24M16 37v-7l7-5 4-10 7 3-4 11" /><circle cx="28" cy="13" r="4" /><path d="m20 27-4-5-5 3 5 5M30 29l5 3 3-4" /></svg></div>
-            <h3>Robotic Biomechanics</h3>
-            <p>Building repeatable whole-joint robotic models to measure acute cartilage deformation and recovery under near-physiological motion.</p>
-            <ul class="tag-list" aria-label="Methods"><li>Robotics</li><li>Experimental biomechanics</li></ul>
+            <figure class="research-media research-media-video">
+              <video muted loop playsinline controls preload="metadata" poster="assets/cow-knee-poster.webp" aria-label="Robotic whole-joint knee model in motion">
+                <source src="assets/cow-knee-web.mp4" type="video/mp4" />
+              </video>
+            </figure>
+            <div class="research-card-copy">
+              <h3>Robotic Biomechanics</h3>
+              <p>Building repeatable whole-joint robotic models to measure acute cartilage deformation and recovery under near-physiological motion.</p>
+              <ul class="tag-list" aria-label="Methods"><li>Robotics</li><li>Experimental biomechanics</li></ul>
+            </div>
           </article>
         </div>
       </section>
+
+      <!-- OPTIONAL PERSONAL PROJECTS: remove this section, or add the hidden attribute, to hide it later. -->
+      <section class="content-section personal-projects-section" id="personal-projects" data-optional-section aria-labelledby="projects-title">
+        <div class="section-shell">
+          <div class="section-heading">
+            <p class="section-kicker">Independent work</p>
+            <h2 id="projects-title">Personal projects.</h2>
+            <p>Explorations in deployable healthcare machine learning, developed separately from my PhD research.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <p class="project-label">01 · On-device vision</p>
+              <h3>Markerless Motion Analysis</h3>
+              <p>Developing markerless motion-analysis models designed to run locally on mobile phones, bringing movement assessment closer to where people live and train.</p>
+              <ul class="tag-list" aria-label="Project methods"><li>Mobile ML</li><li>Pose estimation</li><li>Edge inference</li></ul>
+            </article>
+            <article class="project-card">
+              <p class="project-label">02 · Multimodal AI</p>
+              <h3>Medical Imaging &amp; Clinical Text</h3>
+              <p>Pairing medical images with radiology reports during model development to improve disease detection from images at inference time.</p>
+              <ul class="tag-list" aria-label="Project methods"><li>Multimodal learning</li><li>Medical imaging</li><li>Clinical text</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- END OPTIONAL PERSONAL PROJECTS -->
 
       <section class="content-section publications-section" id="publications" aria-labelledby="publications-title">
         <div class="section-shell">
@@ -127,9 +168,10 @@
               <span class="publication-year">2026</span>
               <div>
                 <p class="publication-venue">Journal of the Mechanical Behavior of Biomedical Materials</p>
-                <h3>Modeling Physiological Tasks and their Impact on Cartilage Deformation and Recovery</h3>
+                <h3>Modeling Physiological Tasks and their Impact on Cartilage Deformation and Recovery: An Intact Porcine Knee Joint Model</h3>
                 <p class="publication-authors"><strong>Tejus Surendran</strong>, Axel C. Moore</p>
                 <p class="publication-summary">A robotic whole-joint model for measuring task-dependent cartilage compression and recovery under near-physiological loading.</p>
+                <a class="paper-link" href="https://www.sciencedirect.com/science/article/pii/S1751616126000482" target="_blank" rel="noreferrer">Read paper <span aria-hidden="true">↗</span></a>
               </div>
               <span class="publication-status">First author</span>
             </li>
@@ -177,7 +219,7 @@
           </article>
 
           <article class="timeline-item">
-            <div class="timeline-meta"><span>2019 — 2023</span><span>Boston, MA</span></div>
+            <div class="timeline-meta"><span>2021 — 2023</span><span>Boston, MA</span></div>
             <div class="timeline-body">
               <p class="timeline-type">Research · Staff Scientist</p><h3>Boston University School of Medicine</h3>
               <p>Developed medical-imaging and predictive-modeling methods spanning knee imaging, computational pathology, and imaging-based biomarkers.</p>
@@ -213,6 +255,9 @@
               <ul class="clean-list recognition-list">
                 <li><span>2026</span> CMU College of Engineering Presidential Fellowship</li>
                 <li><span>2025</span> Outstanding Poster Award · CMU BME Forum</li>
+                <li><span>2021</span> Graduated Cum Laude · Rensselaer Polytechnic Institute</li>
+                <li><span>2018–21</span> Dean’s List · Rensselaer Polytechnic Institute</li>
+                <li><span>2020</span> Academic Excellence Award · Rensselaer Polytechnic Institute</li>
               </ul>
             </div>
           </div>
