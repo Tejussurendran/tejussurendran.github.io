@@ -22,7 +22,6 @@
       </a>
       <nav aria-label="Primary navigation">
         <a href="#research">Research</a>
-        <a class="nav-projects" href="#personal-projects">Projects</a>
         <a href="#publications">Publications</a>
         <a class="nav-background" href="#background">Background</a>
         <a href="#contact">Contact</a>
@@ -35,13 +34,14 @@
           <p class="eyebrow">Fourth-year PhD Candidate · Biomedical Engineering</p>
           <h1 id="hero-title">Computer vision for understanding <em>human movement.</em></h1>
           <p class="hero-intro">
-            I develop computer vision, medical image analysis, and robotic methods to measure how
-            musculoskeletal tissues respond to real-world activity.
+            I’m a fourth-year Biomedical Engineering PhD candidate at Carnegie Mellon University.
+            I develop computer vision, medical image analysis, and robotic methods to understand
+            how musculoskeletal tissues respond to real-world activity.
           </p>
-          <p class="advisor-line">
-            At Carnegie Mellon University, I work with
-            <strong>Dr. John Galeotti</strong> and <strong>Dr. Axel Moore</strong> at the intersection
-            of medical imaging, machine learning, and musculoskeletal biomechanics.
+          <p class="personal-line">
+            Away from my dissertation, I like exploring on-device markerless motion analysis and
+            multimodal learning with medical images and radiology reports. Outside of research,
+            you’ll usually find me hiking, snowboarding, playing basketball, cooking, or trying a new restaurant.
           </p>
           <div class="hero-actions" aria-label="Profile links">
             <a class="primary-button" href="#research">
@@ -92,69 +92,46 @@
         <div class="research-grid">
           <article class="research-card">
             <span class="card-number">01</span>
-            <figure class="research-media research-media-crop">
-              <img src="assets/good-slice.webp" alt="Sagittal knee MRI with cartilage and meniscus segmentation overlays" loading="lazy" />
-            </figure>
             <div class="research-card-copy">
+              <p class="research-label">Image understanding</p>
               <h3>Computer Vision &amp; Medical Image Segmentation</h3>
               <p>Developing robust semantic-segmentation methods for accurate, repeatable analysis of knee cartilage in medical images.</p>
               <ul class="tag-list" aria-label="Methods"><li>Deep learning</li><li>Semantic segmentation</li></ul>
             </div>
+            <figure class="research-media research-media-crop">
+              <img src="assets/good-slice.webp" alt="Sagittal knee MRI with cartilage and meniscus segmentation overlays" loading="lazy" />
+            </figure>
           </article>
 
           <article class="research-card">
             <span class="card-number">02</span>
-            <figure class="research-media research-media-contain">
-              <img src="assets/unrolling.png" alt="Diagram of femoral and tibial cartilage contact and unrolling for in vivo analysis" loading="lazy" />
-            </figure>
             <div class="research-card-copy">
+              <p class="research-label">Living-joint measurement</p>
               <h3>In Vivo Medical Image Analysis</h3>
               <p>Quantifying cartilage strain and recovery across daily activities to understand how living joints respond to physiological loading.</p>
               <ul class="tag-list" aria-label="Methods"><li>2D–3D imaging</li><li>Quantitative analysis</li></ul>
             </div>
+            <figure class="research-media research-media-contain">
+              <img src="assets/unrolling.png" alt="Diagram of femoral and tibial cartilage contact and unrolling for in vivo analysis" loading="lazy" />
+            </figure>
           </article>
 
           <article class="research-card">
             <span class="card-number">03</span>
+            <div class="research-card-copy">
+              <p class="research-label">Experimental modeling</p>
+              <h3>Robotic Biomechanics</h3>
+              <p>Building repeatable whole-joint robotic models to measure acute cartilage deformation and recovery under near-physiological motion.</p>
+              <ul class="tag-list" aria-label="Methods"><li>Robotics</li><li>Experimental biomechanics</li></ul>
+            </div>
             <figure class="research-media research-media-video">
               <video muted loop playsinline controls preload="metadata" poster="assets/cow-knee-poster.webp" aria-label="Robotic whole-joint knee model in motion">
                 <source src="assets/cow-knee-web.mp4" type="video/mp4" />
               </video>
             </figure>
-            <div class="research-card-copy">
-              <h3>Robotic Biomechanics</h3>
-              <p>Building repeatable whole-joint robotic models to measure acute cartilage deformation and recovery under near-physiological motion.</p>
-              <ul class="tag-list" aria-label="Methods"><li>Robotics</li><li>Experimental biomechanics</li></ul>
-            </div>
           </article>
         </div>
       </section>
-
-      <!-- OPTIONAL PERSONAL PROJECTS: remove this section, or add the hidden attribute, to hide it later. -->
-      <section class="content-section personal-projects-section" id="personal-projects" data-optional-section aria-labelledby="projects-title">
-        <div class="section-shell">
-          <div class="section-heading">
-            <p class="section-kicker">Independent work</p>
-            <h2 id="projects-title">Personal projects.</h2>
-            <p>Explorations in deployable healthcare machine learning, developed separately from my PhD research.</p>
-          </div>
-          <div class="project-grid">
-            <article class="project-card">
-              <p class="project-label">01 · On-device vision</p>
-              <h3>Markerless Motion Analysis</h3>
-              <p>Developing markerless motion-analysis models designed to run locally on mobile phones, bringing movement assessment closer to where people live and train.</p>
-              <ul class="tag-list" aria-label="Project methods"><li>Mobile ML</li><li>Pose estimation</li><li>Edge inference</li></ul>
-            </article>
-            <article class="project-card">
-              <p class="project-label">02 · Multimodal AI</p>
-              <h3>Medical Imaging &amp; Clinical Text</h3>
-              <p>Pairing medical images with radiology reports during model development to improve disease detection from images at inference time.</p>
-              <ul class="tag-list" aria-label="Project methods"><li>Multimodal learning</li><li>Medical imaging</li><li>Clinical text</li></ul>
-            </article>
-          </div>
-        </div>
-      </section>
-      <!-- END OPTIONAL PERSONAL PROJECTS -->
 
       <section class="content-section publications-section" id="publications" aria-labelledby="publications-title">
         <div class="section-shell">
@@ -169,7 +146,7 @@
               <div>
                 <p class="publication-venue">Journal of the Mechanical Behavior of Biomedical Materials</p>
                 <h3>Modeling Physiological Tasks and their Impact on Cartilage Deformation and Recovery: An Intact Porcine Knee Joint Model</h3>
-                <p class="publication-authors"><strong>Tejus Surendran</strong>, Axel C. Moore</p>
+                <p class="publication-authors"><strong>Tejus Surendran</strong>, Axel C. Moore, LanAnh Doan</p>
                 <p class="publication-summary">A robotic whole-joint model for measuring task-dependent cartilage compression and recovery under near-physiological loading.</p>
                 <a class="paper-link" href="https://www.sciencedirect.com/science/article/pii/S1751616126000482" target="_blank" rel="noreferrer">Read paper <span aria-hidden="true">↗</span></a>
               </div>
@@ -206,7 +183,7 @@
       <section class="content-section section-shell" id="background" aria-labelledby="background-title">
         <div class="section-heading">
           <p class="section-kicker">Research journey</p>
-          <h2 id="background-title">A trajectory across vision, medicine, and robotics.</h2>
+          <h2 id="background-title">How my research has evolved.</h2>
         </div>
 
         <div class="timeline">
@@ -214,7 +191,7 @@
             <div class="timeline-meta"><span>2023 — Present</span><span>Pittsburgh, PA</span></div>
             <div class="timeline-body">
               <p class="timeline-type">PhD Research</p><h3>Carnegie Mellon University</h3>
-              <p>Fourth-year Biomedical Engineering PhD candidate working with Dr. John Galeotti and Dr. Axel Moore. My research applies computer vision, medical image analysis, robotics, and machine learning to quantify cartilage deformation and recovery. Expected graduation: May 2028.</p>
+              <p>Developing computer-vision, medical-image-analysis, and robotic methods to quantify cartilage deformation and recovery during physiological activities, with an emphasis on robust segmentation, image registration, and whole-joint biomechanics.</p>
             </div>
           </article>
 
