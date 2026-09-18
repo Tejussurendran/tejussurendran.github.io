@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="Tejus Surendran is a computer vision and medical imaging researcher pursuing a PhD in Biomedical Engineering at Carnegie Mellon University." />
     <meta name="theme-color" content="#0a1227" />
@@ -49,7 +49,7 @@
                 <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.4A5.8 5.8 0 0 0 19.2 3 5.4 5.4 0 0 0 19 0s-1.3-.4-4 1.5a13.4 13.4 0 0 0-7 0C5.3-.4 4 0 4 0a5.4 5.4 0 0 0-.2 3A5.8 5.8 0 0 0 2.2 7c0 5.8 3.5 7 6.8 7.4A4.8 4.8 0 0 0 8 18v4" /><path d="M8 19c-3 .9-3-1.5-4.2-2" /></svg>
                 <span class="tooltip">GitHub</span>
               </a>
-              <a class="icon-link" href="mailto:tsurendr@andrew.cmu.edu" aria-label="Email Tejus Surendran">
+              <a class="icon-link" href="mailto:tsurendr@andrew.cmu.edu" data-email-link aria-label="Email Tejus Surendran" title="Open your email app; the address will also be copied">
                 <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
                 <span class="tooltip">Email</span>
               </a>
@@ -59,6 +59,12 @@
 
         <figure class="portrait-frame">
           <img src="tejus_photo.jpg" alt="Portrait of Tejus Surendran" width="800" height="800" />
+          <div class="cv-download">
+            <a class="cv-button" href="assets/Tejus_Surendran_CV.docx" download>
+              Download full CV
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></svg>
+            </a>
+          </div>
         </figure>
       </section>
 
@@ -215,7 +221,7 @@
 
       <section class="contact-section section-shell" id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">Interested in computer vision, medical imaging, or biomechanics?</h2>
-        <a class="contact-link" href="mailto:tsurendr@andrew.cmu.edu">tsurendr@andrew.cmu.edu <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+        <a class="contact-link" href="mailto:tsurendr@andrew.cmu.edu" data-email-link title="Open your email app; the address will also be copied">tsurendr@andrew.cmu.edu <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
       </section>
     </main>
 
@@ -224,8 +230,10 @@
       <div>
         <a href="https://scholar.google.com/citations?hl=en&amp;user=nNJb2Q0AAAAJ" target="_blank" rel="noopener noreferrer">Scholar</a>
         <a href="https://github.com/Tejussurendran" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="mailto:tsurendr@andrew.cmu.edu">Email</a>
+        <a href="mailto:tsurendr@andrew.cmu.edu" data-email-link title="Open your email app; the address will also be copied">Email</a>
       </div>
     </footer>
+    <p class="email-status" id="email-status" role="status" aria-live="polite"></p>
+    <script src="email.js" defer></script>
   </body>
 </html>
